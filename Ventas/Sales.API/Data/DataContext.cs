@@ -1,13 +1,11 @@
-﻿
-
-using Microsoft.EntityFrameworkCore;
-using Sales.Sh.Entities;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.VisualStudio.Services.Profile;
 
 namespace Sales.API.Data
 {
-    public class DataContext:DbContext 
+    public class DataContext : DbContext
     {
-        public DataContext(DbContextOptions<DataContext> options) : base(options) 
+        public DataContext(DbContextOptions<DataContext> options) : base(options)
         {
         }
         public DbSet<Country> Countries { get; set; }
@@ -17,5 +15,7 @@ namespace Sales.API.Data
             base.OnModelCreating(modelBuilder);
             modelBuilder.Entity<Country>().HasIndex(c => c.Name).IsUnique();
         }
+
+
     }
 }
