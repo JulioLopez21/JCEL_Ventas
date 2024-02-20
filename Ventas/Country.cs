@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Sales.Shared.Entities 
+namespace Sales.Sh.Entities 
 { 
  public class Country 
     { 

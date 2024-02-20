@@ -1,11 +1,11 @@
 ﻿
 
 using Microsoft.EntityFrameworkCore;
-using Sales.Shared.Entities;
+using Sales.Sh.Entities;
 
 namespace Sales.API.Data
 {
-    public class DataContext : DbContext 
+    public class DataContext:DbContext 
     {
         public DataContext(DbContextOptions<DataContext> options) : base(options) 
         {
